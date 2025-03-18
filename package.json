@@ -7,7 +7,7 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "create-vite-clone": "dist/cli.js"
+    "create-vite-clone": "dist/index.js"
   },
   "files": [
     "dist"
@@ -16,9 +16,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "prepublishOnly": "npm run build",
-    "example": "tsx src/example.ts",
-    "cli-demo": "node example.js",
-    "demo": "tsx src/demo.ts"
+    "create": "tsx src/create.ts",
+    "sample": "tsx src/sample.ts"
   },
   "keywords": [
     "vite",

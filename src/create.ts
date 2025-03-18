@@ -5,11 +5,14 @@ import path from 'node:path';
 import prompts from 'prompts';
 import { red, green, blue, bold } from 'kolorist';
 import { FRAMEWORKS } from './constants.js';
-import { downloadTemplate } from './index.js';
+import { downloadTemplate } from './utils.js';
 
-async function main() {
+/**
+ * Simple CLI command to create a project
+ */
+async function create() {
   console.log();
-  console.log(`${bold(blue('◤◢'))} ${green('Create Vite Clone Demo')}`);
+  console.log(`${bold(blue('◤◢'))} ${green('Create Vite Project')}`);
   console.log();
 
   // Project name prompt
@@ -115,10 +118,13 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(
-    red('✖') + ' Error:',
-    error instanceof Error ? error.message : String(error)
-  );
-  process.exit(1);
-});
+// Run the command when this file is executed directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  create().catch((error) => {
+    console.error(
+      red('✖') + ' Error:',
+      error instanceof Error ? error.message : String(error)
+    );
+    process.exit(1);
+  });
+}
