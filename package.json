@@ -1,0 +1,23 @@
+{
+  "name": "vite-cli-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "example": "tsx src/example.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "ora": "^8.2.0",
+    "tiged": "3.0.0-rc.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3"
+  }
+}
