@@ -7,12 +7,13 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   minify: process.env.NODE_ENV === 'production',
-  noExternal: ['prompts', 'kolorist', 'cac', 'tiged', 'ora'],
+  external: ["prompts", "tiged", "fs", "node:fs", "fs-extra", "graceful-fs"], 
+  noExternal: ["kolorist", "cac", "ora"],
   treeshake: true,
   splitting: false,
   outDir: 'dist',
   platform: 'node',
-  // banner: {
-  //   js: '#!/usr/bin/env node',
-  // },
+  banner: {
+    js: '#!/usr/bin/env node',
+  },
 });
