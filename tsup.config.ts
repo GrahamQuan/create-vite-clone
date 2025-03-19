@@ -1,23 +1,18 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/index.ts', 'src/utils.ts', 'src/create.ts'],
+  entry: ['src/index.ts'],
   format: ['esm'],
   dts: true,
-  splitting: false,
   sourcemap: true,
   clean: true,
-  minify: false,
-  noExternal: ['prompts', 'kolorist', 'cac'],
-  external: [
-    'fs',
-    'path',
-    'node:fs',
-    'node:path',
-    'os',
-    'node:os',
-    'readline',
-    'node:readline',
-  ],
+  minify: process.env.NODE_ENV === 'production',
+  noExternal: ['prompts', 'kolorist', 'cac', 'tiged', 'ora'],
+  treeshake: true,
+  splitting: false,
+  outDir: 'dist',
   platform: 'node',
+  // banner: {
+  //   js: '#!/usr/bin/env node',
+  // },
 });

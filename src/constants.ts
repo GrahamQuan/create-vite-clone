@@ -63,16 +63,6 @@ export const FRAMEWORKS: FrameworkVariant[] = [
         display: 'TypeScript',
         color: blue,
       },
-      {
-        name: 'react-swc',
-        display: 'JavaScript + SWC',
-        color: yellow,
-      },
-      {
-        name: 'react-swc-ts',
-        display: 'TypeScript + SWC',
-        color: blue,
-      },
     ],
   },
   {

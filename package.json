@@ -13,11 +13,11 @@
     "dist"
   ],
   "scripts": {
+    "dev": "tsx src/index.ts",
+    "dev:watch": "tsup --watch",
     "build": "tsup",
-    "dev": "tsup --watch",
     "prepublishOnly": "npm run build",
-    "create": "tsx src/create.ts",
-    "sample": "tsx src/sample.ts"
+    "ts-check": "tsc --noEmit"
   },
   "keywords": [
     "vite",
