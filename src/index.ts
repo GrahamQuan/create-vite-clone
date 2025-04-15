@@ -1,10 +1,9 @@
-
 import fs from 'node:fs';
 import path from 'node:path';
 import prompts from 'prompts';
 import { red, green, blue, bold } from 'kolorist';
-import { FRAMEWORKS } from './constants.js';
-import { downloadTemplate } from './utils.js';
+import { FRAMEWORKS } from './constants';
+import { downloadTemplate } from './utils';
 
 /**
  * Simple CLI command to create a project
